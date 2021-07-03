@@ -10,4 +10,6 @@ To develop this example I first needed to add these libraries to my project.
 
 --- 
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/esb-password-generator)
+## Tasks  
+1. Adding & Accessing Assets (imgs, etc.) In A Project.  
+1. 
