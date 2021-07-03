@@ -4,3 +4,19 @@ See https://github.com/elwood-berry/esb-password-generator
 Author: Elwood Berry for ELWOODBERRY.COM
 Email: me@elwoodberry.com 
 */
+
+/*
+VARIABLES
+------------------------------------------- */
+
+// VARIABLES | COLORS.
+$demo-alpha: #ffe60015;
+
+/*
+SECTIONS
+------------------------------------------- */
+
+// PASSWORD GENERATOR FORM.
+.password-generator-form {
+  background-color: $demo-alpha;
+}

@@ -50,19 +50,32 @@ Email: me@elwoodberry.com
           />
         </mat-card-title-group> -->
 
-        Primary card content. Intended for blocks of text
+        <div class="elwood-row" fxLayout="row">
+          <div fxFlex="50%">
+            <!-- FORM: PASSWORD GENERATOR -->
+            <form class="password-generator-form" fxLayout="column">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Enter Length</mat-label>
+                <input
+                  matInput
+                  placeholder="How long is the password?"
+                  value=""
+                />
+              </mat-form-field>
 
-        <form class="example-form">
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Favorite food</mat-label>
-            <input matInput placeholder="Ex. Pizza" value="Sushi" />
-          </mat-form-field>
-
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Leave a comment</mat-label>
-            <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-          </mat-form-field>
-        </form>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Leave a comment</mat-label>
+                <textarea
+                  matInput
+                  placeholder="Ex. It makes me feel..."
+                ></textarea>
+              </mat-form-field>
+            </form>
+          </div>
+          <div fxFlex="50%">
+            Primary card content. Intended for blocks of text
+          </div>
+        </div>
       </mat-card-content>
 
       <mat-card-actions
