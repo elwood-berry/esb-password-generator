@@ -51,10 +51,14 @@ Email: me@elwoodberry.com
         </mat-card-title-group> -->
 
         <div class="elwood-row" fxLayout="row">
-          <div fxFlex="50%">
+
+          <div class="elwood-column" fxFlex="50%">
+
             <!-- FORM: PASSWORD GENERATOR -->
             <form class="password-generator-form" fxLayout="column">
-              <!-- INPUT: PASSWORD LENGTH-->
+              <!-- 
+                INPUT: PASSWORD LENGTH
+              -->
               <mat-form-field class="example-full-width" appearance="fill">
                 <mat-label>Enter Length</mat-label>
                 <input
@@ -63,16 +67,29 @@ Email: me@elwoodberry.com
                   value=""
                 />
               </mat-form-field>
-
+              <!-- 
+                INPUT: CHECKBOXES
+              -->
               <mat-checkbox class="">Use Numbers</mat-checkbox>
 
               <mat-checkbox class="">Use Symbols</mat-checkbox>
 
               <mat-checkbox class="">Use Letters</mat-checkbox>
+
+              <!-- 
+                INPUT: BUTTON(s)
+              -->
+              <button mat-stroked-button>Generate Password!</button>
+
             </form>
           </div>
-          <div fxFlex="50%">
+          <div class="elwood-column" fxFlex="50%" fxLayout="column">
             Primary card content. Intended for blocks of text
+
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>New Passowrd</mat-label>
+              <input matInput disabled value="Google">
+            </mat-form-field>
           </div>
         </div>
       </mat-card-content>
