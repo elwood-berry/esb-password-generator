@@ -1,1 +1,8 @@
-/* Add application styles & imports to this file! */
+/*
+PASSWORD GENERATOR.
+See https://github.com/elwood-berry/esb-password-generator
+Author: Elwood Berry for ELWOODBERRY.COM
+Email: me@elwoodberry.com 
+*/
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';

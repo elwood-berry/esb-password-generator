@@ -5,8 +5,8 @@
 
 **Dependecies**  
 To develop this example I first needed to add these libraries to my project.  
-1. [Angular Material](#)  
-1. [fxLayout](#)  
+1. [Angular Material](https://www.npmjs.com/package/@angular/material)  
+1. [fxLayout](https://www.npmjs.com/package/@angular/flex-layout)  
 
 --- 
 
