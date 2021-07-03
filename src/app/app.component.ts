@@ -6,6 +6,7 @@ Email: me@elwoodberry.com
 */
 
 import { Component, VERSION } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'password-generator',

@@ -10,6 +10,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
+// ANGULAR | FLEX LAYOUT
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 // MATERIAL | CDK
 import { A11yModule } from '@angular/cdk/a11y';
 import { CdkStepperModule } from '@angular/cdk/stepper';
@@ -65,6 +68,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
+    FlexLayoutModule,
 
     // MATERIAL | CDK
     A11yModule,
