@@ -39,7 +39,32 @@ export class AppComponent {
     Include Letters: ${this.includeLetters}  
     `);
 
-    this.password = 'DISPLAY THE PASSWORD'; // Update the password string.
+    // VARIABLES
+    const numbers = '0123456789';
+    const letters = 'abcdefghijklmnopqrstuvwxyz';
+    const symbols = '~!@#$%^&*()_=+';
+
+    let validChars = '';
+
+    // CHECK CONDITIONS
+    if (this.includeNumbers) {
+      validChars += numbers;
+    }
+    if (this.includeLetters) {
+      validChars += letters;
+    }
+    if (this.includeSymbols) {
+      validChars += symbols;
+    }
+
+    //
+    let generatedPassword = '';
+    for (let i = 0; i < this.passwordLength; i++) {
+      const index = Math.floor(Math.random() * validChars.length);
+      generatedPassword += validChars[index];
+    }
+
+    this.password = generatedPassword; // Update the password string.
   }
 
   /*  
@@ -48,7 +73,7 @@ export class AppComponent {
   --------------------------------------------------- */
 
   // UPDATE THE PASSWORD LENGTH.
-  public updatePasswordLength(value: string) {
+  public updatePasswordLength(value) {
     console.log('EVENT OBJ: ', value);
     this.passwordLength = value;
   }
