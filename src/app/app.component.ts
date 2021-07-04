@@ -24,4 +24,16 @@ export class AppComponent {
 
     this.password = 'DISPLAY THE PASSWORD'; // Update the password string.
   }
+
+  // ALTERNATIVE: Calling A Method.
+  public getPassword() {
+    console.log('Alternative method for getting password has been clicked.');
+    return this.password;
+  }
+
+  // INTERPOLATION: Calling A Method instead of displaying a final value.
+  public showPassword() {
+    console.log('Calling A Method instead of displaying a final value.');
+    return 'The Current Password Is WUTANG';
+  }
 }

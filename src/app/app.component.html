@@ -87,7 +87,12 @@ Email: me@elwoodberry.com
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label>New Passowrd</mat-label>
               <input matInput disabled [value]="password" />
+              <!-- <input matInput disabled [value]="getPassword()" /> -->
             </mat-form-field>
+
+            <div>{{ password }}</div>
+            <div>{{ showPassword() }}</div>
+
           </div>
         </div>
       </mat-card-content>
