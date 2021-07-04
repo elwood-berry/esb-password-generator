@@ -6,20 +6,19 @@ Email: me@elwoodberry.com
 -->
 
 <div id="demo-container" class="" fxLayout="row">
-  <div fxFlex="20%"><!-- EMPTY COLUMN --></div>
+  <div fxFlex="20%">
+    <!-- EMPTY COLUMN -->
+  </div>
   <div fxFlex="60%">
     <!-- DEMO: PASSWORD GENERATOR -->
     <mat-card>
       <mat-card-header>
         <mat-card-title>Password Generator</mat-card-title>
-        <mat-card-subtitle
-          >Brought to you by
+        <mat-card-subtitle>Brought to you by
           <a href="https://www.elwoodberry.com" target="_blank">Elwood Berry</a>
           from
-          <a href="https://www.elwoodberry.com" target="_blank"
-            >ElwoodBerry.com</a
-          ></mat-card-subtitle
-        >
+          <a href="https://www.elwoodberry.com" target="_blank">ElwoodBerry.com</a>
+        </mat-card-subtitle>
         <!-- <img
           mat-card-avatar
           src="https://cdn0.iconfinder.com/data/icons/brown-bunny-emoticon-filled/64/emoji_animal_avatar_rabbit_bunny_cute-02-512.png"
@@ -87,17 +86,17 @@ Email: me@elwoodberry.com
 
             <mat-form-field class="example-full-width" appearance="fill">
               <mat-label>New Passowrd</mat-label>
-              <input matInput disabled value="" />
+              <input matInput disabled [value]="password" />
             </mat-form-field>
           </div>
         </div>
       </mat-card-content>
 
-      <mat-card-actions
-        >Container for buttons at the bottom of the card</mat-card-actions
-      >
+      <mat-card-actions>Container for buttons at the bottom of the card</mat-card-actions>
       <mat-card-footer>Footer</mat-card-footer>
     </mat-card>
   </div>
-  <div fxFlex="20%"><!-- EMPTY COLUMN --></div>
+  <div fxFlex="20%">
+    <!-- EMPTY COLUMN -->
+  </div>
 </div>
