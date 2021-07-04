@@ -18,7 +18,7 @@ export class AppComponent {
   PROPERTIES
   --------------------------------------------------- */
   public password: string = ''; // A single 'password' property of this class.
-  public passwordLength: string; // The length of the password generated.
+  public passwordLength; // The length of the password generated.
   public includeNumbers: boolean = false; // Do you want to include numbers in the generated password?
   public includeSymbols: boolean = false; // Do you want to include symbols in the generated password?
   public includeLetters: boolean = false; // Do you want to include letters in the generated password?
@@ -48,7 +48,7 @@ export class AppComponent {
   --------------------------------------------------- */
 
   // METHOD: UPDATE THE LENGTH OF THE PASSWORD GENERATED
-  public updatePasswordLength(value: string) {
+  public updatePasswordLength(value) {
     const parsedValue = parseInt(value); // Convert the string into a number.
 
     // IF the value are numbers...
