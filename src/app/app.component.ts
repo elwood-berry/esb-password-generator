@@ -14,7 +14,14 @@ import { MatCardModule } from '@angular/material/card';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  // VARIABLES
+  public password: string = ''; // A single property of this class.
+
+  constructor() {}
+
   public onButtonClick() {
     console.log('Button Was Clicked');
+
+    this.password = 'DISPLAY THE PASSWORD'; // Update the password string.
   }
 }
