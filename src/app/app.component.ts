@@ -13,4 +13,8 @@ import { MatCardModule } from '@angular/material/card';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {}
+export class AppComponent {
+  public onButtonClick() {
+    console.log('Button Was Clicked');
+  }
+}
