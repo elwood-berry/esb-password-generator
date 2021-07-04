@@ -31,10 +31,13 @@ Email: me@elwoodberry.com
               <mat-form-field class="" appearance="fill">
                 <mat-label>Enter Length</mat-label>
                 <input
+                  #passwordLength
                   matInput
                   placeholder="How long is the password?"
                   value=""
-                  (input)="updatePasswordLength($event)"
+                  (keyup.enter)="updatePasswordLength(passwordLength.value)"
+                  (blur)="updatePasswordLength(passwordLength.value)"
+                  type="number"
                 />
               </mat-form-field>
               <!-- 

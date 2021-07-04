@@ -18,7 +18,7 @@ export class AppComponent {
   PROPERTIES
   --------------------------------------------------- */
   public password: string = ''; // A single 'password' property of this class.
-  public passwordLength; // The length of the password generated.
+  public passwordLength: number = null; // The length of the password generated.
   public includeNumbers: boolean = false; // Do you want to include numbers in the generated password?
   public includeSymbols: boolean = false; // Do you want to include symbols in the generated password?
   public includeLetters: boolean = false; // Do you want to include letters in the generated password?
@@ -33,7 +33,7 @@ export class AppComponent {
     console.log(`
     Button has been clicked.   
     Generate a password with the following: 
-    Lenth:  
+    Lenth: ${this.passwordLength}    
     Include Numbers: ${this.includeNumbers}  
     Include Symbols: ${this.includeSymbols}  
     Include Letters: ${this.includeLetters}  
@@ -47,15 +47,25 @@ export class AppComponent {
   Methods called from input fields.
   --------------------------------------------------- */
 
-  // METHOD: UPDATE THE LENGTH OF THE PASSWORD GENERATED
-  public updatePasswordLength(value) {
-    const parsedValue = parseInt(value); // Convert the string into a number.
-
-    // IF the value are numbers...
-    if (!isNaN(parsedValue)) {
-      this.passwordLength = parsedValue;
-    }
+  // UPDATE THE PASSWORD LENGTH.
+  public updatePasswordLength(value: string) {
+    console.log('EVENT OBJ: ', value);
+    this.passwordLength = value;
   }
+
+  // 'deprecated' - METHOD: UPDATE THE LENGTH OF THE PASSWORD GENERATED
+  // public updatePasswordLength(value: string) {
+  //   console.log('EVENT OBJ: ', value);
+  //   const parsedValue = parseInt(value); // Convert the string into a number.
+
+  //   // IF the value are numbers...
+  //   if (!isNaN(parsedValue)) {
+  //     console.log("Parsed Value", parsedValue);
+  //     this.passwordLength = parsedValue;
+  //   } else {
+  //     console.log('The value of this form is not a number...');
+  //   }
+  // }
 
   /*  
   'CHANGE' EVENTS 
