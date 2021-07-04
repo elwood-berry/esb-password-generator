@@ -15,9 +15,10 @@ import { MatCardModule } from '@angular/material/card';
 })
 export class AppComponent {
   /*  
-  VARIABLES
+  PROPERTIES
   --------------------------------------------------- */
   public password: string = ''; // A single 'password' property of this class.
+  public passwordLength: string; // The length of the password generated.
   public includeNumbers: boolean = false; // Do you want to include numbers in the generated password?
   public includeSymbols: boolean = false; // Do you want to include symbols in the generated password?
   public includeLetters: boolean = false; // Do you want to include letters in the generated password?
@@ -29,15 +30,35 @@ export class AppComponent {
   Methods called when the 'Generate Password' button is clicked.
   --------------------------------------------------- */
   public onButtonClick() {
-    console.log('Button Was Clicked');
-    console.log('Include Numbers? ', this.includeNumbers);
-    console.log('Include Symbols? ', this.includeSymbols);
-    console.log('Include Letters? ', this.includeLetters);
+    console.log(`
+    Button has been clicked.   
+    Generate a password with the following: 
+    Lenth:  
+    Include Numbers: ${this.includeNumbers}  
+    Include Symbols: ${this.includeSymbols}  
+    Include Letters: ${this.includeLetters}  
+    `);
+
     this.password = 'DISPLAY THE PASSWORD'; // Update the password string.
   }
 
   /*  
-  CHANGE EVENTS 
+  'INPUT' EVENTS 
+  Methods called from input fields.
+  --------------------------------------------------- */
+
+  // METHOD: UPDATE THE LENGTH OF THE PASSWORD GENERATED
+  public updatePasswordLength(value: string) {
+    const parsedValue = parseInt(value); // Convert the string into a number.
+
+    // IF the value are numbers...
+    if (!isNaN(parsedValue)) {
+      this.passwordLength = parsedValue;
+    }
+  }
+
+  /*  
+  'CHANGE' EVENTS 
   Methods called from checkboxes.
   --------------------------------------------------- */
 

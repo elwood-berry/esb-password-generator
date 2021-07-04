@@ -28,12 +28,13 @@ Email: me@elwoodberry.com
               <!-- 
                 INPUT: PASSWORD LENGTH
               -->
-              <mat-form-field class="example-full-width" appearance="fill">
+              <mat-form-field class="" appearance="fill">
                 <mat-label>Enter Length</mat-label>
                 <input
                   matInput
                   placeholder="How long is the password?"
                   value=""
+                  (input)="updatePasswordLength($event)"
                 />
               </mat-form-field>
               <!-- 
@@ -56,7 +57,7 @@ Email: me@elwoodberry.com
           <div class="elwood-column" fxFlex="50%" fxLayout="column">
             Primary card content. Intended for blocks of text
 
-            <mat-form-field class="example-full-width" appearance="fill">
+            <mat-form-field class="" appearance="fill">
               <mat-label>New Passowrd</mat-label>
               <input matInput disabled [value]="password" />
               <!-- <input matInput disabled [value]="getPassword()" /> -->
