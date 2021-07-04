@@ -16,6 +16,9 @@ import { MatCardModule } from '@angular/material/card';
 export class AppComponent {
   // VARIABLES
   public password: string = ''; // A single property of this class.
+  public includeNumbers: boolean = false; // Do you want to include numbers in the generated password?
+  public includeSymbols: boolean = false; // Do you want to include symbols in the generated password?
+  public includeLetters: boolean = false; // Do you want to include letters in the generated password?
 
   constructor() {}
 
@@ -31,9 +34,32 @@ export class AppComponent {
     return this.password;
   }
 
-  // INTERPOLATION: Calling A Method instead of displaying a final value.
-  public showPassword() {
-    console.log('Calling A Method instead of displaying a final value.');
-    return 'The Current Password Is WUTANG';
+  /*
+CHANGE EVENTS 
+Methods called from checkboxes.
+*/
+
+  // METHOD: USE NUMBERS?
+  // The user is determining whether or not they want to include numbers in the password generated.
+  public useNumbers() {
+    this.includeNumbers = !this.includeNumbers; // The opposite of whatever I am.
   }
+
+  // METHOD: USE SYMBOLS
+  // The user is determining whether or not they want to include symbols in the password generated.
+  public useSymbols() {
+    this.includeSymbols = !this.includeSymbols; // The opposite of whatever I am.
+  }
+
+  // METHOD: USE LETTERS
+  // The user is determining whether or not they want to include letters in the password generated.
+  public useLetters() {
+    this.includeLetters = !this.includeLetters; // The opposite of whatever I am.
+  }
+
+  // INTERPOLATION: Calling A Method instead of displaying a final value.
+  // public showPassword() {
+  //   console.log('Calling A Method instead of displaying a final value.');
+  //   return 'The Current Password Is WUTANG';
+  // }
 }
