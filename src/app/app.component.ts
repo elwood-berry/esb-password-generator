@@ -14,30 +14,32 @@ import { MatCardModule } from '@angular/material/card';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  // VARIABLES
-  public password: string = ''; // A single property of this class.
+  /*  
+  VARIABLES
+  --------------------------------------------------- */
+  public password: string = ''; // A single 'password' property of this class.
   public includeNumbers: boolean = false; // Do you want to include numbers in the generated password?
   public includeSymbols: boolean = false; // Do you want to include symbols in the generated password?
   public includeLetters: boolean = false; // Do you want to include letters in the generated password?
 
   constructor() {}
 
+  /*  
+  GENERATE PASSWORD
+  Methods called when the 'Generate Password' button is clicked.
+  --------------------------------------------------- */
   public onButtonClick() {
     console.log('Button Was Clicked');
-
+    console.log('Include Numbers? ', this.includeNumbers);
+    console.log('Include Symbols? ', this.includeSymbols);
+    console.log('Include Letters? ', this.includeLetters);
     this.password = 'DISPLAY THE PASSWORD'; // Update the password string.
   }
 
-  // ALTERNATIVE: Calling A Method.
-  public getPassword() {
-    console.log('Alternative method for getting password has been clicked.');
-    return this.password;
-  }
-
-  /*
-CHANGE EVENTS 
-Methods called from checkboxes.
-*/
+  /*  
+  CHANGE EVENTS 
+  Methods called from checkboxes.
+  --------------------------------------------------- */
 
   // METHOD: USE NUMBERS?
   // The user is determining whether or not they want to include numbers in the password generated.
@@ -57,9 +59,19 @@ Methods called from checkboxes.
     this.includeLetters = !this.includeLetters; // The opposite of whatever I am.
   }
 
+  /*
+  PENDING DELETION
+  --------------------------------------------------- */
+
   // INTERPOLATION: Calling A Method instead of displaying a final value.
   // public showPassword() {
   //   console.log('Calling A Method instead of displaying a final value.');
   //   return 'The Current Password Is WUTANG';
+  // }
+
+  // ALTERNATIVE: Calling A Method.
+  // public getPassword() {
+  //   console.log('Alternative method for getting password has been clicked.');
+  //   return this.password;
   // }
 }
