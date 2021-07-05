@@ -52,7 +52,7 @@ Email: me@elwoodberry.com
               <!-- 
                 BUTTON: GENERATE PASSWORD!
               -->
-              <button mat-stroked-button (click)="onButtonClick()">Generate Password!</button>
+              <button [disabled]="!(passwordLength && includeNumbers || includeSymbols || includeLetters)" mat-stroked-button (click)="onButtonClick()">Generate Password!</button>
             </form>
           </div>
           <div class="elwood-column" fxFlex="50%" fxLayout="column">
