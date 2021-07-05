@@ -67,6 +67,12 @@ export class AppComponent {
     this.password = generatedPassword; // Update the password string.
   }
 
+
+  public checkRequirements(){
+console.log('what');
+  }
+
+
   /*  
   'INPUT' EVENTS 
   Methods called from input fields.
