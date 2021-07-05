@@ -43,6 +43,7 @@ Email: me@elwoodberry.com
               <!-- 
                 INPUT: CHECKBOXES
               -->
+              <h3>Composition</h3>
               <mat-checkbox (change)="useNumbers()" class="">Use Numbers</mat-checkbox>
 
               <mat-checkbox (change)="useSymbols()" class="">Use Symbols</mat-checkbox>
@@ -56,7 +57,25 @@ Email: me@elwoodberry.com
             </form>
           </div>
           <div class="elwood-column" fxFlex="50%" fxLayout="column">
-            <div class="displayNewPassword">{{ password }}</div>
+            <div *ngIf="password" class="displayNewPassword">{{ password }}</div>
+
+            <div *ngIf="!password" class="newPasswordInstructions">
+
+              <h3>Getting Started</h3>
+              <p>To generate a new passoword you must first define how long you want the password to be. Provide a
+                number between 8-99 where it says "Enter Length". The directions to get a new password go here.</p>
+
+              <h3>Next...</h3>
+              <p>You must define what your passord will be made of (numbers, letters, etc). Please select at least one
+                of the checkboxes under "Composition".</p>
+
+              <h3>Then...</h3>
+              <p>Then click the buton labeled "Generate Passord". Your new password will be displayed. You can then copy
+                and paste the new password.</p>
+
+
+            </div>
+
           </div>
         </div>
       </mat-card-content>
