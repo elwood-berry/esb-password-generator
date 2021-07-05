@@ -12,15 +12,21 @@ To develop this example I first needed to add these libraries to my project.
 
 ## Tasks  
 1. Adding & Accessing Assets (imgs, etc.) In A Project.  
-1. ARIA Roles understanding, application and demonstration.  
-1. TAB Order understanding, application and demonstration.  
-1. [Card Interfaces](https://material.angular.io/components/card/api#interfaces) for testing Cards
-1. [Classes](https://material.angular.io/components/card/api#classes) of testing Cards 
+
 
 ---  
 
 ## Question Topics  
 1. User Input - Grabbing the value from an input field.
+1. VID 02.20 - 'Review On Property Binding' (Diabled button until conditions make it not disabled.).
+
+---  
+
+## Extended Learning Topics  
+1. ARIA Roles understanding, application and demonstration.  
+1. TAB Order understanding, application and demonstration.  
+1. [Card Interfaces](https://material.angular.io/components/card/api#interfaces) for testing Cards
+1. [Classes](https://material.angular.io/components/card/api#classes) of testing Cards 
 
 ---  
 
