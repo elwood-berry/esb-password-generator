@@ -25,6 +25,8 @@ export class AppComponent {
 
   constructor() {}
 
+  // public passwordLength:ElementRef
+  
   /*  
   GENERATE PASSWORD
   Methods called when the 'Generate Password' button is clicked.
